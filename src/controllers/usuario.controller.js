@@ -161,9 +161,9 @@ const getAllUsuariosByRolId = async (req, res, next) => {
 };
 
 module.exports = {
-  createUsuario,
-  updateUsuario,
-  getAllUsuarioByAdministradorId,
-  deleteUsuario,
-  getAllUsuariosByRolId
+    createUsuario,
+    updateUsuario,
+    getAllUsuarioByAdministradorId,
+    deleteUsuario,
+    getAllUsuariosByRolId
 };
