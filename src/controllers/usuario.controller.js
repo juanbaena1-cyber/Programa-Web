@@ -102,7 +102,7 @@ const updateUsuario = async (req, res, next) => {
 };
 
 // Listar usuarios administrados por el usuario autenticado
-const getAllUsuarioByAdministradorId = async (req, res, next) => {
+const getAllUsuarioByADMINId = async (req, res, next) => {
   try {
     const usuarios = await Usuario.findAll({
       where: {
@@ -163,7 +163,7 @@ const getAllUsuariosByRolId = async (req, res, next) => {
 module.exports = {
     createUsuario,
     updateUsuario,
-    getAllUsuarioByAdministradorId,
+    getAllUsuarioByADMINId,
     deleteUsuario,
     getAllUsuariosByRolId
 };

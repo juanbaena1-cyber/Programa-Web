@@ -12,10 +12,6 @@ router.get('/usuarios', authenticateToken, checkRole([ROLES.ADMIN]), usuarioCont
 router.delete('/usuarios/delete/:id', authenticateToken, checkRole([ROLES.ADMIN]), usuarioController.deleteUsuario);
 router.get('/usuarios/rol/:id', authenticateToken, checkRole([ROLES.ADMIN]), usuarioController.getAllUsuariosByRolId);
 
-console.log('authenticateToken:', typeof authenticateToken);
-console.log('checkRole:', typeof checkRole);
-console.log('ROLES.ADMIN:', ROLES.ADMIN);
-console.log('createUsuario:', typeof usuarioController.createUsuario);
 // Middleware de manejo de errores
 router.use(errorHandler);
 
