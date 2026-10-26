@@ -1,4 +1,4 @@
-const Usuario = require('../usuario.model');
+const Usuario = require('./usuario.model');
 const project = require('../project.model');
 const UsuarioProject = require('../usuarioProject.model');
 
