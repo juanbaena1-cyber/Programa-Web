@@ -5,7 +5,7 @@ const listar = async (req, res) => {
 module.exports = { listar };
 
 
-const Usuario = require('../usuario.model');
+const Usuario = require('../models/usuario.model');
 const bcrypt = require('bcryptjs');
 
 // Crear usuario
