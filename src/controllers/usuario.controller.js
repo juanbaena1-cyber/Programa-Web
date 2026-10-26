@@ -36,7 +36,7 @@ const createUsuario = async (req, res, next) => {
       email,
       password: passwordHash,
       rol_id,
-      administrador_id: req.user.id
+      administrador_id: req.Usuario.id
     });
 
     const { password: _, ...usuarioSeguro } = usuario.toJSON();
@@ -58,7 +58,7 @@ const updateUsuario = async (req, res, next) => {
     const usuario = await Usuario.findOne({
       where: {
         id: req.params.id,
-        administrador_id: req.user.id
+        administrador_id: req.Usuario.id
       }
     });
 
@@ -106,7 +106,7 @@ const getAllUsuarioByAdministradorId = async (req, res, next) => {
   try {
     const usuarios = await Usuario.findAll({
       where: {
-        administrador_id: req.user.id
+        administrador_id: req.Usuario.id
       },
       attributes: { exclude: ['password'] }
     });
@@ -123,7 +123,7 @@ const deleteUsuario = async (req, res, next) => {
     const usuario = await Usuario.findOne({
       where: {
         id: req.params.id,
-        administrador_id: req.user.id
+        administrador_id: req.Usuario.id
       }
     });
 
@@ -149,7 +149,7 @@ const getAllUsuariosByRolId = async (req, res, next) => {
     const usuarios = await Usuario.findAll({
       where: {
         rol_id: req.params.id,
-        administrador_id: req.user.id
+        administrador_id: req.Usuario.id
       },
       attributes: { exclude: ['password'] }
     });

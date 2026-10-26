@@ -23,7 +23,7 @@ const authenticateToken = (req, res, next) => {
 
 const checkRole = (roles) => {
     return (req, res, next) => {
-        const { rol_id } = req.Usuario;
+        const { rol_id } = req.Usuario?.rol_id;
 
         if (!roles.includes(rol_id)) {
             return res.status(403).json({ message: 'Acceso denegado, rol no autorizado' });
