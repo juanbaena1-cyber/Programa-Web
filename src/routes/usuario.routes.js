@@ -6,11 +6,11 @@ const ROLES = require('../utils/constants');
 const errorHandler = require('../middlewares/error.middleware');
 
 // Ruta de usuarios
-router.post('/usuarios/create', authenticateToken, checkRole([ROLES.ADMINISTRADOR]), usuarioController.createUsuario);
-router.put('/usuarios/update/:id', authenticateToken, checkRole([ROLES.ADMINISTRADOR]), usuarioController.updateUsuario);
-router.get('/usuarios', authenticateToken, checkRole([ROLES.ADMINISTRADOR]), usuarioController.getAllUsuarioByAdministradorId);
-router.delete('/usuarios/delete/:id', authenticateToken, checkRole([ROLES.ADMINISTRADOR]), usuarioController.deleteUsuario);
-router.get('/usuarios/rol/:id', authenticateToken, checkRole([ROLES.ADMINISTRADOR]), usuarioController.getAllUsuariosByRolId);
+router.post('/usuarios/create', authenticateToken, checkRole([ROLES.ADMIN]), usuarioController.createUsuario);
+router.put('/usuarios/update/:id', authenticateToken, checkRole([ROLES.ADMIN]), usuarioController.updateUsuario);
+router.get('/usuarios', authenticateToken, checkRole([ROLES.ADMIN]), usuarioController.getAllUsuarioByADMINId);
+router.delete('/usuarios/delete/:id', authenticateToken, checkRole([ROLES.ADMIN]), usuarioController.deleteUsuario);
+router.get('/usuarios/rol/:id', authenticateToken, checkRole([ROLES.ADMIN]), usuarioController.getAllUsuariosByRolId);
 
 // Middleware de manejo de errores
 router.use(errorHandler);
