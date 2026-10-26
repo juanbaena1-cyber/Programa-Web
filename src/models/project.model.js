@@ -18,9 +18,9 @@ const project = sequelize.define('project', {
     tableName: 'proyectos',
     timestamps: false,
     hooks: {
-        aftercreate: (project, options) => {
+        afterCreate: (project, options) => {
             if (project.fecha_cracion) {
-                project.fecha_cracion.sethours(project.fecha_cracion.getHours() - 5);
+                project.fecha_cracion.setHours(project.fecha_cracion.getHours() - 5);
             }
         }
     }
