@@ -1,6 +1,6 @@
 const Usuario = require('./usuario.model');
-const project = require('../project.model');
-const UsuarioProject = require('../usuarioProject.model');
+const project = require('./project.model');
+const UsuarioProject = require('./usuarioProject.model');
 
 // Relaciones muchos a muchos
 Usuario.belongsToMany(project, { through: UsuarioProject, foreignKey: 'usuario_id', as: 'projects' });
