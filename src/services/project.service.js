@@ -1,6 +1,6 @@
-const Project = require('../models/Project.modal');
-const Usuario = require('../models/Usuario.model');
-const UsuarioProject = require('../models/UsuarioProject.model');
+const Project = require('./models/Project.modal');
+const Usuario = require('./models/Usuario.model');
+const UsuarioProject = require('./models/UsuarioProject.model');
 const ROLES = require('../utils/constants');
 
 exports.createProject = async (data) => {try {

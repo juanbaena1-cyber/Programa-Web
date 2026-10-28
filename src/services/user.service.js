@@ -1,4 +1,4 @@
-const Usuario = require('../models/Usuario.model');
+const Usuario = require('./models/Usuario.model');
 const bcrypt = require('bcryptjs');
 
 exports.createUsuario = async (nombre, email, password, rol_id, administrador_id) => {
